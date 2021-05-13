@@ -237,10 +237,14 @@ section {
     transform: rotate(-58deg);
 }
 
-.checkbox-wrapper input:checked + label, .radio-wrapper input:checked + label {
-    font-weight: bold;
+.checkbox-wrapper input + label::after, .radio-wrapper input + label::after {
+    content: none;
 }
+
+.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
+    content: "";
 }
+
 /* Hero Styles End */
 
 .intro p{
